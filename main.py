@@ -11,10 +11,10 @@ def loop():
     while True:
         GPIO.output(2, True)
         print("up")
-        time.sleep(0.01)
+        time.sleep(1/1000)
         GPIO.output(2, False)
         print("down")
-        time.sleep(0.01)
+        time.sleep(1/1000)
 
 
 if __name__ == "__main__":
