@@ -1,3 +1,4 @@
+import time
 import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BCM)
@@ -9,7 +10,9 @@ GPIO.setup(2, GPIO.OUT)
 def loop():
     while True:
         GPIO.output(2, True)
-        GPIO.output(3, False)
+        time.sleep(2)
+        GPIO.output(2, False)
+        time.sleep(2)
 
 
 if __name__ == "__main__":
