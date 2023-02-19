@@ -10,8 +10,10 @@ GPIO.setup(2, GPIO.OUT)
 def loop():
     while True:
         GPIO.output(2, True)
+        print("up")
         time.sleep(2)
         GPIO.output(2, False)
+        print("down")
         time.sleep(2)
 
 
@@ -19,4 +21,5 @@ if __name__ == "__main__":
     try:
         loop()
     except KeyboardInterrupt:
+        GPIO.cleanup()
         exit(1)
