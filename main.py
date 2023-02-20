@@ -4,7 +4,7 @@ import threading
 import queue
 
 data = 'hello World'
-q = queue.Queue
+q = queue.Queue()
 
 TX1_pin = 2
 clk = 3
