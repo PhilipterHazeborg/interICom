@@ -74,9 +74,8 @@ def main():
 if __name__ == "__main__":
     try:
         main()
-        t1 = threading.Thread(target=clock, args=(0.01,))
-        
+        t1 = threading.Thread(target=clock, args=(0.01,), daemon=True)
         t1.start()
     except KeyboardInterrupt:
-        #GPIO.cleanup()
+        GPIO.cleanup()
         exit(1)
