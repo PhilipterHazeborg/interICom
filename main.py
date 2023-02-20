@@ -49,6 +49,7 @@ def send(data_in):
 
 def send_first_of_stack():
     queue_data = q.get()
+    print(queue_data)
     if queue_data is not None:
         bit_to_transmit = queue_data[0]
         remaining_stack = queue_data[1:]
