@@ -29,11 +29,12 @@ def convert_to_binary(input_data: str):
 
 
 def clock(sleeptime:  float):
-    GPIO.output(clk, True)
-    send_first_of_stack()
-    time.sleep(sleeptime)
-    GPIO.output(clk, False)
-    time.sleep(sleeptime)
+    while True:
+        GPIO.output(clk, True)
+        send_first_of_stack()
+        time.sleep(sleeptime)
+        GPIO.output(clk, False)
+        time.sleep(sleeptime)
 
 
 def send(data_in):
