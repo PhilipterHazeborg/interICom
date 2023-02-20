@@ -71,10 +71,10 @@ def main():
 
 if __name__ == "__main__":
     try:
+        main()
         t1 = threading.Thread(target=clock, args=(0.01,))
         
         t1.start()
-        main()
     except KeyboardInterrupt:
         #GPIO.cleanup()
         exit(1)
