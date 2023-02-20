@@ -71,7 +71,7 @@ def main():
 
 if __name__ == "__main__":
     try:
-        t1 = threading.Thread(target=clock, args=(0.01, 3))
+        t1 = threading.Thread(target=clock, args=(0.01,))
         
         t1.start()
         main()
