@@ -62,7 +62,7 @@ def pull_down():
 
 def main():
     print(convert_to_binary(data))
-    q.put()
+    q.put(convert_to_binary(data))
     GPIO.add_event_detect(3, GPIO.RISING, callback=send_first_of_stack)
     GPIO.add_event_detect(3, GPIO.FALLING, callback=send_first_of_stack)
 
